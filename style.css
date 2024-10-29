@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #fff;
+    background: linear-gradient(180deg, #111, #000);
+    /* Dark gradient for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    position: relative;
+    /* For overlay positioning */
+}
+
+/* Overlay for better text contrast */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    z-index: 0;
+    /* Behind the content */
+}
+
+/* Dollar Sign Background - Using Image */
+body::after {
+    content: '';
+    position: absolute;
+    background-image: url('path/to/your/dollar-sign.png');
+    /* Replace with your image URL */
+    background-size: contain;
+    /* Adjust to your preference */
+    background-repeat: no-repeat;
+    /* Prevent repeating */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    opacity: 0.1;
+    /* Adjust opacity to make it faintly visible */
+    z-index: 0;
+    /* Behind the content */
+    pointer-events: none;
+    /* Allow interaction with elements above */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('img.jpg');
+    /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 5px solid #ffdd57;
+    /* Gold line for emphasis */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    /* Text shadow for better visibility */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    /* Darker overlay for better text contrast */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    color: #ffdd57;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.8em;
+    margin-bottom: 1.5em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1.1em;
+    /* Increased button font size */
+    text-shadow: none;
+    /* Remove text shadow */
+}
+
+.twitter {
+    background-color: #1da1f2;
+    text-shadow: none;
+    /* Remove text shadow */
+}
+
+.twitter:hover {
+    background-color: #0c8bcf;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Shadow on hover */
+}
+
+.telegram {
+    background-color: #0088cc;
+    text-shadow: none;
+    /* Remove text shadow */
+}
+
+.telegram:hover {
+    background-color: #006a9f;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Shadow on hover */
+}
+
+/* About Section */
+.about,
+.roadmap,
+.community,
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 800px;
+    z-index: 1;
+    /* Above the overlay */
+}
+
+.about h2,
+.roadmap h2,
+.community h2 {
+    color: #ffdd57;
+    font-size: 2.5em;
+    /* Increased header size */
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* Added text shadow */
+}
+
+.about p {
+    font-size: 1.2em;
+    /* Larger font size for better readability */
+    line-height: 1.6;
+    /* Improved line spacing */
+}
+
+/* Roadmap Section */
+.roadmap-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.roadmap-item {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Added transition for hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Default shadow */
+}
+
+.roadmap-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    /* Shadow on hover */
+}
+
+.roadmap-item h3 {
+    color: #ffdd57;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    font-size: 0.9em;
+    color: #bbb;
+    background-color: #333;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
